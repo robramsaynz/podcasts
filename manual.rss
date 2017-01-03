@@ -3,12 +3,12 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
 
   <channel>
-    <atom:link href="https://dl.dropboxusercontent.com/u/20809014/rss/rob-manual.rss" rel="self" type="application/rss+xml" />
-    <link>https://dl.dropboxusercontent.com/u/20809014/rss/rob-manual.rss</link>
-    <title>Rob's manually created music stream</title>
+    <atom:link href="https://robramsaynz.github.io/podcasts/manual.rss" rel="self" type="application/rss+xml" />
+    <link>https://robramsaynz.github.io/podcasts/manual.rss</link>
+    <title>robramsaynz's manually personal podcast</title>
     <language>en-gb</language>
 
-    <itunes:image href="https://dl.dropboxusercontent.com/u/20809014/rss/bass-bin.jpg" />
+    <itunes:image href="http://robramsaynz.github.io/podcasts/robramsaynz.jpg" />
 
     <item>
       <title>2016-12-30  UncleDugs</title>
@@ -23,7 +23,7 @@
       <enclosure url="https://dl.dropboxusercontent.com/u/20809014/rss/KeySound211116.mp3" type="audio/mpeg"/>
       <pubDate>10 Dec 2016 12:00:00 +0000</pubDate>
     </item>
-    
+
     <item>
       <title>Rinse FM Podcast - Uncle Dugs - 14th July 2016</title>
       <enclosure url="http://podcast.dgen.net/rinsefm/podcast/UncleDugs150716.mp3" type="audio/mpeg"/>
