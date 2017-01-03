@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+
+  <channel>
+    <atom:link href="https://dl.dropboxusercontent.com/u/20809014/rss/rob-manual.rss" rel="self" type="application/rss+xml" />
+    <link>https://dl.dropboxusercontent.com/u/20809014/rss/rob-manual.rss</link>
+    <title>Rob's manually created music stream</title>
+    <language>en-gb</language>
+
+    <itunes:image href="https://dl.dropboxusercontent.com/u/20809014/rss/bass-bin.jpg" />
+
+    <item>
+      <title>2016-12-30  UncleDugs</title>
+      <enclosure url="http://podcast.dgen.net/rinsefm/podcast/UncleDugs301216.mp3" type="audio/mpeg"/>
+      <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/UncleDugs301216.mp3</guid>
+      <pubDate>Fri 30 Dec 2016 00:00:09 UTC</pubDate>
+    </item>
+
+    <item>
+      <title>KeySound211116.mp3</title>
+      <guid isPermaLink="false">KeySound211116</guid>
+      <enclosure url="https://dl.dropboxusercontent.com/u/20809014/rss/KeySound211116.mp3" type="audio/mpeg"/>
+      <pubDate>10 Dec 2016 12:00:00 +0000</pubDate>
+    </item>
+    
+    <item>
+      <title>Rinse FM Podcast - Uncle Dugs - 14th July 2016</title>
+      <enclosure url="http://podcast.dgen.net/rinsefm/podcast/UncleDugs150716.mp3" type="audio/mpeg"/>
+      <guid isPermaLink="false">Rinse FM Podcast - Uncle Dugs - 14th July 2016</guid>
+      <pubDate>Mon, 11 Jul 2016 13:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>22 Jul - UNCLE DUGS W/ DJ BROCKIE, NAVIGATOR AND EASTMAN </title>
+      <guid isPermaLink="false"> UNCLE DUGS W/ DJ BROCKIE, NAVIGATOR AND EASTMAN </guid>
+      <enclosure url="http://podcast.dgen.net/rinsefm/podcast/UncleDugs220716.mp3" type="audio/mpeg"/>
+      <pubDate>22 Jul 2016 12:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>18 Jul - KEYSOUND </title>
+      <guid isPermaLink="false"> KEYSOUND </guid>
+      <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Keysound180716.mp3" type="audio/mpeg"/>
+      <pubDate>18 Jul 2016 12:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>13 Jul - HUNTLEYS & PALMERS W/ DEBONAIR </title>
+      <guid isPermaLink="false"> HUNTLEYS & PALMERS W/ DEBONAIR </guid>
+      <enclosure url="http://podcast.dgen.net/rinsefm/podcast/HuntleysPalmers130716.mp3" type="audio/mpeg"/>
+      <pubDate>13 Jul 2016 12:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>13 Jul - STAMINA W/ JAKES </title>
+      <guid isPermaLink="false"> STAMINA W/ JAKES </guid>
+      <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Stamina130716.mp3" type="audio/mpeg"/>
+      <pubDate>13 Jul 2016 12:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>09 Jul - HANNAH FAITH W/ TALL BLACK GUY </title>
+      <guid isPermaLink="false"> HANNAH FAITH W/ TALL BLACK GUY </guid>
+      <enclosure url="http://podcast.dgen.net/rinsefm/podcast/HannahFaith090716.mp3" type="audio/mpeg"/>
+      <pubDate>09 Jul 2016 12:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>09 Jul - THE MENENDEZ BROTHERS </title>
+      <guid isPermaLink="false"> THE MENENDEZ BROTHERS </guid>
+      <enclosure url="http://podcast.dgen.net/rinsefm/podcast/TheMenendezBrothers090716.mp3" type="audio/mpeg"/>
+      <pubDate>09 Jul 2016 12:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>08 Jul - UNCLE DUGS W/ SLIMZEE </title>
+      <guid isPermaLink="false"> UNCLE DUGS W/ SLIMZEE </guid>
+      <enclosure url="http://podcast.dgen.net/rinsefm/podcast/UncleDugs080716.mp3" type="audio/mpeg"/>
+      <pubDate>08 Jul 2016 12:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>06 Jul - CRITICAL MUSIC W/ REDDERS, SAM BINGA & HYROGLIFICS </title>
+      <guid isPermaLink="false"> CRITICAL MUSIC W/ REDDERS, SAM BINGA & HYROGLIFICS </guid>
+      <enclosure url="http://podcast.dgen.net/rinsefm/podcast/CriticalMusic060716.mp3" type="audio/mpeg"/>
+      <pubDate>06 Jul 2016 12:00:00 +0000</pubDate>
+    </item>
+
+  </channel>
+</rss>
