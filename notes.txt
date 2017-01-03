@@ -1,0 +1,39 @@
+# Personal podcasts #
+
+There's a non-podcast RSS feed at http://rinse.fm/podcasts/feeds, but I
+couldn't see a way to get older podcasts so, you'll probably just want to
+download and munge http://rinse.fm/podcasts/ instead.
+
+    $ curl http://rinse.fm/podcasts/
+    ...
+    <div id="podcasts-listing" class="left">
+    <div class="subtitle borderbottom"><h4 class="label bglavender rounded box5 neg left tstarbold px14 ls1 mb20">Sunday 18 December 2016</h4></div><div class="podcasts">
+    <div class="borderbottom left podcast-list-item" id="boxed181216">
+    ...
+    <div class="borderbottom left podcast-list-item" id="spoony181216">
+    <div class="left w8-16">
+    <h3 class="darkgrey tstarheavyupper px15 mb8">
+    <a class="darkgrey" href="http://rinse.fm/artists/spoony/">Spoony</a> </h3>
+    <div class="listen icon soundcloud">
+    <a href="http://soundcloud.com/rinsefm/spoony181216" nclick="__gaTracker('send', 'event', 'openpodcastinplayer', 'soundcloud_podcastpage', 'Podcast: Spoony');" class="bgsoundcloudorange soundcloud-link" data-airtime="18" data-air-day="2016-12-18" data-artist="Spoony" data-img-src="http://rinse.fm/wp-content/uploads/2014/12/133_spoony.png">&nbsp;</a>
+    <a href="http://podcast.dgen.net/rinsefm/podcast/Spoony181216.mp3" class="bglightblue alt-link" style="display:none" data-airtime="18" data-air-day="2016-12-18" data-artist="Spoony" data-img-src="http://rinse.fm/wp-content/uploads/2014/12/133_spoony.png">&nbsp;</a>
+    </div>
+    <div class="listen icon">
+    <a href="http://podcast.dgen.net/rinsefm/podcast/Spoony181216.mp3" class="bglightblue" onclick="__gaTracker('send', 'event', 'openpodcastinplayer', 'podcastpage', 'Podcast: Spoony');" data-airtime="18" data-air-day="2016-12-18" data-artist="Spoony" data-img-src="http://rinse.fm/wp-content/uploads/2014/12/133_spoony.png">&nbsp;</a>
+    </div>
+    <div class="download icon">
+    <a href="http://podcast.dgen.net/rinsefm/podcast/Spoony181216.mp3" download="http://podcast.dgen.net/rinsefm/podcast/Spoony181216.mp3" target="_blank" class="bglavender" title="Right Click and Save As to Download"/>&nbsp;</a>
+    </div>
+    </div>
+    ...
+
+This gives you the podcasts
+
+    $ curl http://rinse.fm/podcasts/ | sed -E -n -e '/download="http:\/\/podcast[^ ]*/p' | sed -E -e 's/.*download="//g' -e 's/" .*//'
+
+You can get the next page using:
+
+    $ curl http://rinse.fm/podcasts/?page=2
+
+
+`/podcasts/?page=1` and `/podcasts/` are the same thing.
