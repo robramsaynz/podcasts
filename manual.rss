@@ -14,13 +14,13 @@
       <title>2016-12-30  UncleDugs</title>
       <enclosure url="http://podcast.dgen.net/rinsefm/podcast/UncleDugs301216.mp3" type="audio/mpeg"/>
       <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/UncleDugs301216.mp3</guid>
-      <pubDate>Fri 30 Dec 2016 00:00:09 UTC</pubDate>
+      <pubDate>Fri 30 Dec 2016 00:00:09 +0000</pubDate>
     </item>
 
     <item>
       <title>KeySound211116.mp3</title>
       <guid isPermaLink="false">KeySound211116</guid>
-      <enclosure url="https://dl.dropboxusercontent.com/u/20809014/rss/KeySound211116.mp3" type="audio/mpeg"/>
+      <enclosure url="http://dl.dropboxusercontent.com/u/20809014/rss/KeySound211116.mp3" type="audio/mpeg"/>
       <pubDate>10 Dec 2016 12:00:00 +0000</pubDate>
     </item>
 
@@ -46,8 +46,8 @@
     </item>
 
     <item>
-      <title>13 Jul - HUNTLEYS & PALMERS W/ DEBONAIR </title>
-      <guid isPermaLink="false"> HUNTLEYS & PALMERS W/ DEBONAIR </guid>
+      <title>13 Jul - HUNTLEYS and PALMERS W/ DEBONAIR </title>
+      <guid isPermaLink="false"> HUNTLEYS and PALMERS W/ DEBONAIR </guid>
       <enclosure url="http://podcast.dgen.net/rinsefm/podcast/HuntleysPalmers130716.mp3" type="audio/mpeg"/>
       <pubDate>13 Jul 2016 12:00:00 +0000</pubDate>
     </item>
