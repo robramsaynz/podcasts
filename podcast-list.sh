@@ -27,7 +27,7 @@ gawk '$1 ~ /Uncle/ {
 
     print "    <item>";
     print "      <title>"shortdate"  "performer"</title>";
-    print "      <enclosure url=\""url"\" type=\"audio/mpeg\"/>";
+    print "      <enclosure url=\""url"\" type=\"audio/mpeg\" length=\"1\"/>";
     print "      <guid isPermaLink=\"false\">"guid"</guid>";
     print "      <pubDate>"longdate"</pubDate>";
     print "    </item>";
