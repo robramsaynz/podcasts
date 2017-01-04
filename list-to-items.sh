@@ -15,9 +15,10 @@ gawk '{
     performer = rslt[1];
     date = rslt[2];
 
-    "date -u -jf %d%m%y%H%M " date "0000" | getline longdate
+    "date -u -jf %d%m%y%H%M " date "0000 +\"%a, %d %b %Y %H:%M:%S GMT\"" | getline longdate
     "date -u -jf %d%m%y " date " +%Y-%m-%d" | getline shortdate
 
+    print "";
     print "    <item>";
     print "      <title>"shortdate"  "performer"</title>";
     print "      <enclosure url=\""url"\" type=\"audio/mpeg\" length=\"1\"/>";
