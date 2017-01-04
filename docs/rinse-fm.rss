@@ -9,7 +9,7 @@
     <description>A podcast of Rinse FM shows created by manually processing http://rinse.fm/podcasts/.</description>
     <language>en-gb</language>
 
-    <itunes:image href="http://robramsaynz.github.io/podcasts/robramsaynz.jpg" />
+    <itunes:image href="http://robramsaynz.github.io/podcasts/RinseMainLogo.jpg" />
 
     <item>
       <title>2017-01-03  Youngsta</title>
