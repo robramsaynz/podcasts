@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $ ./limit-favourites.sh list.txt | ./list-to-items.sh list.txt | pbcopy
+# $ ./only-favourites.sh list.txt | ./list-to-items.sh - | pbcopy
 #
 # Then past into rss file.
 # 
