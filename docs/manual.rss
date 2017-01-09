@@ -12,6 +12,27 @@
     <itunes:image href="http://robramsaynz.github.io/podcasts/robramsaynz.jpg" />
 
     <item>
+      <title>2017-01-06  UncleDugs</title>
+      <enclosure url="http://podcast.dgen.net/rinsefm/podcast/UncleDugs060117.mp3" type="audio/mpeg" length="1"/>
+      <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/UncleDugs060117.mp3</guid>
+      <pubDate>Fri, 06 Jan 2017 00:00:54 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>2017-01-05  HessleAudio</title>
+      <enclosure url="http://podcast.dgen.net/rinsefm/podcast/HessleAudio050117.mp3" type="audio/mpeg" length="1"/>
+      <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/HessleAudio050117.mp3</guid>
+      <pubDate>Thu, 05 Jan 2017 00:00:54 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>2017-01-05  Swamp81</title>
+      <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Swamp81050117.mp3" type="audio/mpeg" length="1"/>
+      <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Swamp81050117.mp3</guid>
+      <pubDate>Thu, 05 Jan 2017 00:00:54 GMT</pubDate>
+    </item>
+
+    <item>
       <title>2016-12-30  UncleDugs</title>
       <enclosure url="http://podcast.dgen.net/rinsefm/podcast/UncleDugs301216.mp3" type="audio/mpeg" length="1"/>
       <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/UncleDugs301216.mp3</guid>
