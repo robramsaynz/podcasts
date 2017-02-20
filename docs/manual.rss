@@ -11,6 +11,35 @@
 
     <itunes:image href="http://robramsaynz.github.io/podcasts/robramsaynz.jpg" />
 
+
+    <item>
+      <title>2017-02-17  UncleDugs</title>
+      <enclosure url="http://podcast.dgen.net/rinsefm/podcast/UncleDugs170217.mp3" type="audio/mpeg" length="1"/>
+      <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/UncleDugs170217.mp3</guid>
+      <pubDate>Fri, 17 Feb 2017 00:00:24 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>2017-02-16  HessleAudio</title>
+      <enclosure url="http://podcast.dgen.net/rinsefm/podcast/HessleAudio160217.mp3" type="audio/mpeg" length="1"/>
+      <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/HessleAudio160217.mp3</guid>
+      <pubDate>Thu, 16 Feb 2017 00:00:24 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>2017-02-16  Swamp81</title>
+      <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Swamp81160217.mp3" type="audio/mpeg" length="1"/>
+      <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Swamp81160217.mp3</guid>
+      <pubDate>Thu, 16 Feb 2017 00:00:24 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>2017-02-15  Metalheadz</title>
+      <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Metalheadz150217.mp3" type="audio/mpeg" length="1"/>
+      <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Metalheadz150217.mp3</guid>
+      <pubDate>Wed, 15 Feb 2017 00:00:24 GMT</pubDate>
+    </item>
+
     <item>
       <title>2017-02-10  UncleDugs</title>
       <enclosure url="http://podcast.dgen.net/rinsefm/podcast/UncleDugs100217.mp3" type="audio/mpeg" length="1"/>
