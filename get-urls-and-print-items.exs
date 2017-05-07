@@ -5,8 +5,21 @@
 
 
 defmodule RinseFMRSSFeed do
+  def save_links(links) do
+    !File.write("./ex_links.dat", Enum.join(links, "\n"));
+    !File.write("./ex_links_last.dat", hd(links));
+    nil
+  end
+
+  def filter_previously_processed(urls) do
+    {:ok, file} = File.read("./docs/rinse-fm.rss")
+    [_match, lastest_url] = Regex.run(~r{enclosure url="(.*?.mp3)"}, file)
+
+    Enum.take_while(urls, &(&1 != lastest_url))
+  end
+
   def filter_favourites(urls) do
-  Enum.filter(urls, &favourite?/1)
+    Enum.filter(urls, &favourite?/1)
   end
 
   def favourite?(url) do
@@ -89,14 +102,13 @@ links_3 = Regex.scan(~r{download="(http://podcast\S*?)"}, results_3)
 
 links = [links_1, links_2, links_3] |> List.flatten
 
-!File.write("./ex_links.dat", Enum.join(links, "\n"));
-!File.write("./ex_links_last.dat", hd(links));
-
+RinseFMRSSFeed.save_links(links)
 
 # ---------
 
 {:ok, file} = File.read("ex_links.dat")
 urls = String.split(file, "\n")
+       |> RinseFMRSSFeed.filter_previously_processed
        # |> RinseFMRSSFeed.filter_favourites
 
 url_infos = RinseFMRSSFeed.extract_infos_from_urls(urls)
