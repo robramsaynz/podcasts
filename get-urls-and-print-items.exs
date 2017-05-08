@@ -76,11 +76,15 @@ defmodule RinseFMRSSFeed do
 
   def rss_item_from_url_info(:invalid), do: ""
   def rss_item_from_url_info(info) do
+    performer = String.replace(info.performer, "&", "&amp;")
+    url = String.replace(info.url, "&", "%26")
+    guid = String.replace(info.guid, "&", "%26")
+
     """
         <item>
-            <title>#{info.shortdate} #{info.performer}</title>
-            <enclosure url="#{info.url}" type="audio/mpeg" length="1"/>
-            <guid isPermaLink="false">#{info.guid}</guid>
+            <title>#{info.shortdate} #{performer}</title>
+            <enclosure url="#{url}" type="audio/mpeg" length="1"/>
+            <guid isPermaLink="false">#{guid}</guid>
             <pubDate>#{info.longdate}</pubDate>
         </item>
     """
