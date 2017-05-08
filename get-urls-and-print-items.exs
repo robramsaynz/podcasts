@@ -58,6 +58,7 @@ defmodule RinseFMRSSFeed do
 
             %{
               url: url,
+              guid: url,
               performer: performer,
               longdate: String.trim(longdate),
               shortdate: String.trim(shortdate),
@@ -79,7 +80,7 @@ defmodule RinseFMRSSFeed do
         <item>
             <title>#{info.shortdate} #{info.performer}</title>
             <enclosure url="#{info.url}" type="audio/mpeg" length="1"/>
-            <guid isPermaLink="false">"guid"</guid>
+            <guid isPermaLink="false">#{info.guid}</guid>
             <pubDate>#{info.longdate}</pubDate>
         </item>
     """
