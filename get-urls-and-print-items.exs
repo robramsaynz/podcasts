@@ -5,14 +5,8 @@
 
 
 defmodule RinseFMRSSFeed do
-  def save_links(links) do
-    !File.write("./ex_links.dat", Enum.join(links, "\n"));
-    !File.write("./ex_links_last.dat", hd(links));
-    nil
-  end
-
-  def filter_previously_processed(urls) do
-    {:ok, file} = File.read("./docs/rinse-fm.rss")
+  def filter_previously_processed(urls, file) do
+    {:ok, file} = File.read(file)
     [_match, lastest_url] = Regex.run(~r{enclosure url="(.*?.mp3)"}, file)
 
     Enum.take_while(urls, &(&1 != lastest_url))
@@ -107,16 +101,21 @@ links_3 = Regex.scan(~r{download="(http://podcast\S*?)"}, results_3)
 
 links = [links_1, links_2, links_3] |> List.flatten
 
-RinseFMRSSFeed.save_links(links)
+# !File.write("./ex_links.dat", Enum.join(links, "\n"));
+# {:ok, file} = File.read("ex_links.dat")
+# links = String.split(file, "\n")
 
-# ---------
+urls = case System.argv do
+  ["-f"] ->
+    links
+    |> RinseFMRSSFeed.filter_previously_processed("./docs/manual.rss")
+    |> RinseFMRSSFeed.filter_favourites
+  _ ->
+    RinseFMRSSFeed.filter_previously_processed(links, "./docs/rinse-fm.rss")
+end
 
-{:ok, file} = File.read("ex_links.dat")
-urls = String.split(file, "\n")
-       |> RinseFMRSSFeed.filter_previously_processed
-       # |> RinseFMRSSFeed.filter_favourites
+urls
+|> RinseFMRSSFeed.extract_infos_from_urls
+|> RinseFMRSSFeed.rss_items_from_url_infos
+|> IO.write
 
-url_infos = RinseFMRSSFeed.extract_infos_from_urls(urls)
-rss_items = RinseFMRSSFeed.rss_items_from_url_infos(url_infos)
-
-IO.write rss_items
