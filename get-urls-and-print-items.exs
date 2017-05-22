@@ -27,6 +27,7 @@ defmodule RinseFMRSSFeed do
       url =~ ~r/Metalhead/ -> true
       url =~ ~r/LobsterTheremin/ -> true
       url =~ ~r/Swamp81/ -> true
+      url =~ ~r/Hodge/ -> true
       true -> false
     end
   end
@@ -107,7 +108,7 @@ links = [links_1, links_2, links_3] |> List.flatten
 
 urls = case System.argv do
   ["-f"] ->
-    links
+    links_3
     |> RinseFMRSSFeed.filter_previously_processed("./docs/manual.rss")
     |> RinseFMRSSFeed.filter_favourites
   _ ->
