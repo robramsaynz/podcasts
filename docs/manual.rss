@@ -42,6 +42,12 @@
         <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Stamina100517.mp3</guid>
         <pubDate>Wed, 10 May 2017 00:00:40 GMT</pubDate>
     </item>
+    <item>
+        <title>2017-05-09 Hodge</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Hodge090517_v2.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Hodge090517_v2.mp3</guid>
+        <pubDate>Tue, 09 May 2017 00:00:35 GMT</pubDate>
+    </item>
 
     <item>
         <title>2017-05-05 UncleDugs</title>
