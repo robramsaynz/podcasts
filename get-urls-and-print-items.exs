@@ -114,8 +114,17 @@ urls = case System.argv do
     RinseFMRSSFeed.filter_previously_processed(links, "./docs/rinse-fm.rss")
 end
 
-urls
-|> RinseFMRSSFeed.extract_infos_from_urls
-|> RinseFMRSSFeed.rss_items_from_url_infos
-|> IO.write
+rss_items = urls
+            |> RinseFMRSSFeed.extract_infos_from_urls
+            |> RinseFMRSSFeed.rss_items_from_url_infos
 
+case System.argv do
+  ["-f"] ->
+    new_text = File.read!("./docs/manual.rss")
+               |> String.replace("<!-- items: -->", "<!-- items: -->\n#{rss_items}", global: false)
+    File.write!("./docs/manual.rss", new_text)
+  _ ->
+    new_text = File.read!("./docs/rinse-fm.rss")
+               |> String.replace("<!-- items: -->", "<!-- items: -->\n#{rss_items}", global: false)
+    File.write!("./docs/rinse-fm.rss", new_text)
+end
