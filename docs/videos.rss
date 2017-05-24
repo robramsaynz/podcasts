@@ -3,7 +3,7 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
 
   <channel>
-    <atom:link href="https://robramsaynz.github.io/podcasts/test.rss" rel="self" type="application/rss+xml" />
+    <atom:link href="https://robramsaynz.github.io/podcasts/videos.rss" rel="self" type="application/rss+xml" />
     <link>https://robramsaynz.github.io/podcasts/videos.rss</link>
     <title>robramsaynz video links</title>
     <description>robramsaynz video links</description>
