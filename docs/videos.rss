@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+
+  <channel>
+    <atom:link href="https://robramsaynz.github.io/podcasts/test.rss" rel="self" type="application/rss+xml" />
+    <link>https://robramsaynz.github.io/podcasts/videos.rss</link>
+    <title>robramsaynz video links</title>
+    <description>robramsaynz video links</description>
+    <language>en-gb</language>
+
+    <itunes:image href="http://robramsaynz.github.io/podcasts/robramsaynz.jpg" />
+
+    <!-- items: -->
+    <item>
+      <title>Neil Gaiman - Inspirational Commencement Speech at the University of the Arts 2012 - YouTube</title>
+      <description>Neil Gaiman Addresses the University of the Arts Class of 2012 One of the best commencement speeches. A must watch for any artist and everyone who hopes to b...</description>
+      <pubDate>2012-05-23</pubDate>
+    </item>
+  </channel>
+</rss>
