@@ -13,8 +13,14 @@
 
     <!-- items: -->
     <item>
+      <title>Videos &amp; Press - Brené Brown</title>
+      <link>http://brenebrown.com/videos/</link>
+      <guid isPermaLink="false">http://brenebrown.com/videos/</guid>
+    </item>
+
+    <item>
       <title>Amy Cuddy: Your body language shapes who you are | TED Talk | TED.com</title>
-      <description>Body language affects how others see us, but it may also change how we see ourselves. Social psychologist Amy Cuddy shows how &quot;power posing&quot; -- standing in a posture of confidence, even when we don't feel confident -- can affect testosterone and cortisol levels in the brain, and might even have an impact on our chances for success. (Note: Some of the findings presented in this talk have been referenced in an ongoing debate among social scientists about robustness and reproducibility. Read Amy Cuddy's response under &quot;Learn more&quot; below.)<description>
+      <description>Body language affects how others see us, but it may also change how we see ourselves. Social psychologist Amy Cuddy shows how &quot;power posing&quot; -- standing in a posture of confidence, even when we don't feel confident -- can affect testosterone and cortisol levels in the brain, and might even have an impact on our chances for success. (Note: Some of the findings presented in this talk have been referenced in an ongoing debate among social scientists about robustness and reproducibility. Read Amy Cuddy's response under &quot;Learn more&quot; below.)</description>
       <link>https://www.ted.com/talks/amy_cuddy_your_body_language_shapes_who_you_are</link>
       <guid isPermaLink="false">https://www.ted.com/talks/amy_cuddy_your_body_language_shapes_who_you_are</guid>
       <pubDate>Mon, 01 Oct 2012 15:00:08 GMT</pubDate>
