@@ -9,9 +9,29 @@
     <description>robramsaynz music links</description>
     <language>en-gb</language>
 
-    <itunes:image href="http://robramsaynz.github.io/podcasts/robramsaynz.jpg" />
-
     <!-- items: -->
+    <item>
+      <title>The Deconstructed Ego (EP) | Jaubi</title>
+      <link>https://jaubi.bandcamp.com/releases</link>
+      <guid isPermaLink="false">https://jaubi.bandcamp.com/releases</guid>
+      <pubDate>Thu, 25 May 2017 02:16:17 GMT</pubDate>
+    </item>
+
+    <itunes:image href="http://robramsaynz.github.io/podcasts/robramsaynz.jpg" />
+    <item>
+      <description>Find a Hidden Agenda - Is It Love? first pressing or reissue. Complete your Hidden Agenda collection. Shop Vinyl and CDs.</description>
+      <link>https://www.discogs.com/Hidden-Agenda-Is-It-Love/master/18555</link>
+      <guid isPermaLink="false">https://www.discogs.com/Hidden-Agenda-Is-It-Love/master/18555</guid>
+      <pubDate>Thu, 25 May 2017 02:15:26 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>MUTEKPREVIEW059 - Édition 18  | MUTEK</title>
+      <link>http://www.mutek.org/en/audio/podcasts/mutekpreview/789-mutekpreview059-edition-18</link>
+      <guid isPermaLink="false">http://www.mutek.org/en/audio/podcasts/mutekpreview/789-mutekpreview059-edition-18</guid>
+      <pubDate>Thu, 25 May 2017 02:13:29 GMT</pubDate>
+    </item>
+
     <item>
       <title>N-Type - Blind Fury - YouTube</title>
       <description>bass</description>
