@@ -13,6 +13,19 @@
 
     <!-- items: -->
     <item>
+        <title>2017-05-12 UncleDugs</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/UncleDugs120517.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/UncleDugs120517.mp3</guid>
+        <pubDate>Fri, 12 May 2017 00:00:24 GMT</pubDate>
+    </item>
+    <item>
+        <title>2017-05-10 Stamina</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Stamina100517.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Stamina100517.mp3</guid>
+        <pubDate>Wed, 10 May 2017 00:00:24 GMT</pubDate>
+    </item>
+
+    <item>
         <title>2017-05-18 Swamp81</title>
         <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Swamp81180517.mp3" type="audio/mpeg" length="1"/>
         <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Swamp81180517.mp3</guid>
