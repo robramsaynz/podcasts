@@ -106,26 +106,33 @@ links = [links_1, links_2, links_3] |> List.flatten
 # {:ok, file} = File.read("ex_links.dat")
 # links = String.split(file, "\n")
 
-urls = case System.argv do
-  ["-f"] ->
-    links_3
-    |> RinseFMRSSFeed.filter_previously_processed("./docs/manual.rss")
-    |> RinseFMRSSFeed.filter_favourites
-  _ ->
-    RinseFMRSSFeed.filter_previously_processed(links, "./docs/rinse-fm.rss")
-end
+
+# --- update manual.rss ---
+
+urls = links_3
+       |> RinseFMRSSFeed.filter_previously_processed("./docs/manual.rss")
+       |> RinseFMRSSFeed.filter_favourites
 
 rss_items = urls
             |> RinseFMRSSFeed.extract_infos_from_urls
             |> RinseFMRSSFeed.rss_items_from_url_infos
 
-case System.argv do
-  ["-f"] ->
-    new_text = File.read!("./docs/manual.rss")
-               |> String.replace("<!-- items: -->", "<!-- items: -->\n#{rss_items}", global: false)
-    File.write!("./docs/manual.rss", new_text)
-  _ ->
-    new_text = File.read!("./docs/rinse-fm.rss")
-               |> String.replace("<!-- items: -->", "<!-- items: -->\n#{rss_items}", global: false)
-    File.write!("./docs/rinse-fm.rss", new_text)
-end
+new_text = File.read!("./docs/manual.rss")
+           |> String.replace("<!-- items: -->", "<!-- items: -->\n#{rss_items}", global: false)
+
+File.write!("./docs/manual.rss", new_text)
+
+
+# --- update rinse-fm.rss ---
+
+urls = RinseFMRSSFeed.filter_previously_processed(links, "./docs/rinse-fm.rss")
+
+rss_items = urls
+            |> RinseFMRSSFeed.extract_infos_from_urls
+            |> RinseFMRSSFeed.rss_items_from_url_infos
+
+new_text = File.read!("./docs/rinse-fm.rss")
+           |> String.replace("<!-- items: -->", "<!-- items: -->\n#{rss_items}", global: false)
+
+File.write!("./docs/rinse-fm.rss", new_text)
+
