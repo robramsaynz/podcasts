@@ -13,6 +13,37 @@
 
     <!-- items: -->
     <item>
+        <title>2017-06-09 Uncledugs</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Uncledugs090617.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Uncledugs090617.mp3</guid>
+        <pubDate>Fri, 09 Jun 2017 00:00:34 GMT</pubDate>
+    </item>
+    <item>
+        <title>2017-06-08 HessleAudio</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/HessleAudio080617.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/HessleAudio080617.mp3</guid>
+        <pubDate>Thu, 08 Jun 2017 00:00:34 GMT</pubDate>
+    </item>
+    <item>
+        <title>2017-06-08 Swamp81</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Swamp81080617.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Swamp81080617.mp3</guid>
+        <pubDate>Thu, 08 Jun 2017 00:00:34 GMT</pubDate>
+    </item>
+    <item>
+        <title>2017-06-01 HessleAudio</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/HessleAudio010617.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/HessleAudio010617.mp3</guid>
+        <pubDate>Thu, 01 Jun 2017 00:00:34 GMT</pubDate>
+    </item>
+    <item>
+        <title>2017-06-01 Swamp81</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Swamp81010617.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Swamp81010617.mp3</guid>
+        <pubDate>Thu, 01 Jun 2017 00:00:34 GMT</pubDate>
+    </item>
+
+    <item>
         <title>2017-05-27 AuntieFlo</title>
         <enclosure url="http://podcast.dgen.net/rinsefm/podcast/AuntieFlo270517.mp3" type="audio/mpeg" length="1"/>
         <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/AuntieFlo270517.mp3</guid>
