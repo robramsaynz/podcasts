@@ -9,6 +9,10 @@ defmodule RinseFMRSSFeed do
     {:ok, file} = File.read(file)
     [_match, lastest_url] = Regex.run(~r{enclosure url="(.*?.mp3)"}, file)
 
+    unless Enum.member?(urls, lastest_url) do
+      raise("RinseFM feed didn't include the most recent entry in #{file}")
+    end
+
     Enum.take_while(urls, &(&1 != lastest_url))
   end
 
@@ -19,16 +23,16 @@ defmodule RinseFMRSSFeed do
   def favourite?(url) do
     cond do
       url =~ "Huntleys.*Palmers" -> true
-      url =~ ~r/UncleDugs/ -> true
-      url =~ ~r/Keysound/ -> true
-      url =~ ~r/Stamina/ -> true
-      url =~ ~r/Hospital/ -> true
-      url =~ ~r/Hessle/ -> true
-      url =~ ~r/Metalhead/ -> true
-      url =~ ~r/LobsterTheremin/ -> true
-      url =~ ~r/Swamp81/ -> true
-      url =~ ~r/Hodge/ -> true
-      url =~ ~r/AuntieFlo/ -> true
+      url =~ ~r/Uncle.?Dugs/i -> true
+      url =~ ~r/Keysound/i -> true
+      url =~ ~r/Stamina/i -> true
+      url =~ ~r/Hospital/i -> true
+      url =~ ~r/Hessle/i -> true
+      url =~ ~r/Metalhead/i -> true
+      url =~ ~r/Lobster.?Theremin/i -> true
+      url =~ ~r/Swamp81/i -> true
+      url =~ ~r/Hodge/i -> true
+      url =~ ~r/Auntie.?Flo/i -> true
       true -> false
     end
   end
@@ -110,7 +114,7 @@ links = [links_1, links_2, links_3] |> List.flatten
 
 # --- update manual.rss ---
 
-urls = links_3
+urls = links
        |> RinseFMRSSFeed.filter_previously_processed("./docs/manual.rss")
        |> RinseFMRSSFeed.filter_favourites
 
