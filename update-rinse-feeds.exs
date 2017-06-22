@@ -33,6 +33,7 @@ defmodule RinseFMRSSFeed do
       url =~ ~r/Swamp81/i -> true
       url =~ ~r/Hodge/i -> true
       url =~ ~r/Auntie.?Flo/i -> true
+      url =~ ~r/Critical.?Music/i -> true
       true -> false
     end
   end
