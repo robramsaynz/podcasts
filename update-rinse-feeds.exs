@@ -3,8 +3,62 @@
 # $ ./get-list.exs | pbcopy
 #
 
-
 defmodule RinseFMRSSFeed do
+  def run do
+    {results_1, 0} = System.cmd("curl", ["-s", "http://rinse.fm/podcasts/"])
+    links_1 = Regex.scan(~r{download="(http://podcast\S*?)"}, results_1)
+              |> List.flatten |> tl |> Enum.take_every(2)
+
+    {results_2, 0} = System.cmd("curl", ["-s", "http://rinse.fm/podcasts/?page=2"])
+    links_2 = Regex.scan(~r{download="(http://podcast\S*?)"}, results_2)
+              |> List.flatten |> tl |> Enum.take_every(2)
+
+    {results_3, 0} = System.cmd("curl", ["-s", "http://rinse.fm/podcasts/?page=3"])
+    links_3 = Regex.scan(~r{download="(http://podcast\S*?)"}, results_3)
+              |> List.flatten |> tl |> Enum.take_every(2)
+
+    links = [links_1, links_2, links_3] |> List.flatten
+
+    # !File.write("./ex_links.dat", Enum.join(links, "\n"));
+    # {:ok, file} = File.read("ex_links.dat")
+    # links = String.split(file, "\n")
+
+    update_manual_rss(links)
+    update_rinse_fm_rss(links)
+  end
+
+  # update manual.rss
+  defp update_manual_rss(links) do
+    urls = links
+           |> RinseFMRSSFeed.Filter.filter_previously_processed("./docs/manual.rss")
+           |> RinseFMRSSFeed.Filter.filter_favourites
+
+    rss_items = urls
+                |> RinseFMRSSFeed.Parse.extract_infos_from_urls
+                |> RinseFMRSSFeed.Parse.rss_items_from_url_infos
+
+    append_rss_items_to_file("./docs/manual.rss", rss_items)
+  end
+
+  # update rinse-fm.rss
+  defp update_rinse_fm_rss(links) do
+    urls = RinseFMRSSFeed.Filter.filter_previously_processed(links, "./docs/rinse-fm.rss")
+
+    rss_items = urls
+                |> RinseFMRSSFeed.Parse.extract_infos_from_urls
+                |> RinseFMRSSFeed.Parse.rss_items_from_url_infos
+
+    append_rss_items_to_file("./docs/rinse-fm.rss", rss_items)
+  end
+
+  defp append_rss_items_to_file(file, rss_items) do
+    File.read!(file)
+    |> String.replace("<!-- items: -->", "<!-- items: -->\n#{rss_items}", global: false)
+    |> (&File.write!(file, &1)).()
+  end
+end
+
+defmodule RinseFMRSSFeed.Filter do
   def filter_previously_processed(urls, file) do
     {:ok, file} = File.read(file)
     [_match, lastest_url] = Regex.run(~r{enclosure url="(.*?.mp3)"}, file)
@@ -37,7 +91,9 @@ defmodule RinseFMRSSFeed do
       true -> false
     end
   end
+end
 
+defmodule RinseFMRSSFeed.Parse do
   def extract_infos_from_urls(urls) do
     Enum.map(urls, &extract_info_from_url/1)
   end
@@ -92,53 +148,5 @@ defmodule RinseFMRSSFeed do
   end
 end
 
-# ---------
 
-{results_1, 0} = System.cmd("curl", ["-s", "http://rinse.fm/podcasts/"])
-links_1 = Regex.scan(~r{download="(http://podcast\S*?)"}, results_1)
-          |> List.flatten |> tl |> Enum.take_every(2)
-
-{results_2, 0} = System.cmd("curl", ["-s", "http://rinse.fm/podcasts/?page=2"])
-links_2 = Regex.scan(~r{download="(http://podcast\S*?)"}, results_2)
-          |> List.flatten |> tl |> Enum.take_every(2)
-
-{results_3, 0} = System.cmd("curl", ["-s", "http://rinse.fm/podcasts/?page=3"])
-links_3 = Regex.scan(~r{download="(http://podcast\S*?)"}, results_3)
-          |> List.flatten |> tl |> Enum.take_every(2)
-
-links = [links_1, links_2, links_3] |> List.flatten
-
-# !File.write("./ex_links.dat", Enum.join(links, "\n"));
-# {:ok, file} = File.read("ex_links.dat")
-# links = String.split(file, "\n")
-
-
-# --- update manual.rss ---
-
-urls = links
-       |> RinseFMRSSFeed.filter_previously_processed("./docs/manual.rss")
-       |> RinseFMRSSFeed.filter_favourites
-
-rss_items = urls
-            |> RinseFMRSSFeed.extract_infos_from_urls
-            |> RinseFMRSSFeed.rss_items_from_url_infos
-
-new_text = File.read!("./docs/manual.rss")
-           |> String.replace("<!-- items: -->", "<!-- items: -->\n#{rss_items}", global: false)
-
-File.write!("./docs/manual.rss", new_text)
-
-
-# --- update rinse-fm.rss ---
-
-urls = RinseFMRSSFeed.filter_previously_processed(links, "./docs/rinse-fm.rss")
-
-rss_items = urls
-            |> RinseFMRSSFeed.extract_infos_from_urls
-            |> RinseFMRSSFeed.rss_items_from_url_infos
-
-new_text = File.read!("./docs/rinse-fm.rss")
-           |> String.replace("<!-- items: -->", "<!-- items: -->\n#{rss_items}", global: false)
-
-File.write!("./docs/rinse-fm.rss", new_text)
-
+RinseFMRSSFeed.run()
