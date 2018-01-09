@@ -1,7 +1,25 @@
 #!/usr/bin/env elixir
 #
-# $ ./get-list.exs | pbcopy
+# $ ./update-rinse-feeds.exs
+# $ git add -u docs
+# $ git commit "update podcasts"
 #
+
+# TODO: Convert this to pull out the title/date/etc
+#   <div id="naafi030118" class="borderbottom left podcast-list-item">...
+#     <div class="left w8-16">
+#       <h3 class="darkgrey tstarheavyupper px15 mb8">NAAFI</h3>
+#       ...
+#       <div class="listen icon">
+#         <a href="http://podcast.dgen.net/rinsefm/podcast/NAAFI030118.mp3" class="bglightblue" onclick="__gaTracker('send', 'event', 'openpodcastinplayer', 'podcastpage', 'Podcast: NAAFI');" data-airtime="1" data-air-day="2018-01-04" data-artist="NAAFI">&nbsp;</a>
+#       </div>
+#       ...
+#       <div class="right">
+#         <div class="date tstarregular grey px12 mt0">01:00 - 03:00 </div>
+#         ...
+#       </div>
+#     </div>
+#   </div>
 
 defmodule RinseFMRSSFeed do
   def run do
