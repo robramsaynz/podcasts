@@ -21,6 +21,17 @@
 #     </div>
 #   </div>
 
+# TODO: To remove duplicate entries
+#   guid_list = File.read!(@input_file)
+#               |> String.split("\n", trim: true)
+#               |> Enum.map(&String.trim/1)
+#               |> Enum.filter(&( &1 =~ ~r/guid/ ))
+#
+#   deduped_list = list |> Enum.sort |> Enum.dedup
+#
+#   extra items = list -- deduped
+
+
 defmodule RinseFMRSSFeed do
   def run do
     {results_1, 0} = System.cmd("curl", ["-s", "http://rinse.fm/podcasts/"])
