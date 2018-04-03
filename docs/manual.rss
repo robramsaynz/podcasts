@@ -13,6 +13,87 @@
 
     <!-- items: -->
     <item>
+        <title>2018-04-01 Swamp81</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Swamp81010418.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Swamp81010418.mp3</guid>
+        <pubDate>Sun, 01 Apr 2018 00:00:23 GMT</pubDate>
+    </item>
+    <item>
+        <title>2018-03-30 UncleDugs</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/UncleDugs300318.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/UncleDugs300318.mp3</guid>
+        <pubDate>Fri, 30 Mar 2018 00:00:23 GMT</pubDate>
+    </item>
+    <item>
+        <title>2018-03-29 LobsterTheremin</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/LobsterTheremin290318.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/LobsterTheremin290318.mp3</guid>
+        <pubDate>Thu, 29 Mar 2018 00:00:23 GMT</pubDate>
+    </item>
+    <item>
+        <title>2018-03-28 HospitalRecords</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/HospitalRecords280318.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/HospitalRecords280318.mp3</guid>
+        <pubDate>Wed, 28 Mar 2018 00:00:23 GMT</pubDate>
+    </item>
+    <item>
+        <title>2018-03-25 Swamp81</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Swamp81250318.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Swamp81250318.mp3</guid>
+        <pubDate>Sun, 25 Mar 2018 00:00:23 GMT</pubDate>
+    </item>
+    <item>
+        <title>2018-03-23 UncleDugs</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/UncleDugs230318.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/UncleDugs230318.mp3</guid>
+        <pubDate>Fri, 23 Mar 2018 00:00:23 GMT</pubDate>
+    </item>
+    <item>
+        <title>2018-03-22 HessleAudio</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/HessleAudio220318.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/HessleAudio220318.mp3</guid>
+        <pubDate>Thu, 22 Mar 2018 00:00:23 GMT</pubDate>
+    </item>
+    <item>
+        <title>2018-03-21 Metalheadz</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Metalheadz210318.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Metalheadz210318.mp3</guid>
+        <pubDate>Wed, 21 Mar 2018 00:00:23 GMT</pubDate>
+    </item>
+    <item>
+        <title>2018-03-19 Keysound</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Keysound190318.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Keysound190318.mp3</guid>
+        <pubDate>Mon, 19 Mar 2018 00:00:23 GMT</pubDate>
+    </item>
+    <item>
+        <title>2018-03-18 Swamp81</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Swamp81180318.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Swamp81180318.mp3</guid>
+        <pubDate>Sun, 18 Mar 2018 00:00:23 GMT</pubDate>
+    </item>
+    <item>
+        <title>2018-03-15 HessleAudio</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/HessleAudio150318.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/HessleAudio150318.mp3</guid>
+        <pubDate>Thu, 15 Mar 2018 00:00:23 GMT</pubDate>
+    </item>
+    <item>
+        <title>2018-03-13 Hodge</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Hodge130318.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Hodge130318.mp3</guid>
+        <pubDate>Tue, 13 Mar 2018 00:00:23 GMT</pubDate>
+    </item>
+
+   <item>
+      <title>2018-03-13  JoshuaJames</title>
+      <enclosure url="http://podcast.dgen.net/rinsefm/podcast/JoshuaJames130318.mp3" type="audio/mpeg" length="1"/>
+      <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/JoshuaJames130318.mp3</guid>
+      <pubDate>Tue, 13 Mar 2018 00:00:16 GMT</pubDate>
+    </item>
+    <!-- bump: -->
+
+    <item>
         <title>2018-01-07 Swamp81</title>
         <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Swamp81070118.mp3" type="audio/mpeg" length="1"/>
         <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Swamp81070118.mp3</guid>
