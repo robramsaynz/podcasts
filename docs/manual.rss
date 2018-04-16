@@ -13,6 +13,55 @@
 
     <!-- items: -->
     <item>
+        <title>2018-04-15 Swamp81</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Swamp81150418.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Swamp81150418.mp3</guid>
+        <pubDate>Sun, 15 Apr 2018 00:00:04 GMT</pubDate>
+    </item>
+    <item>
+        <title>2018-04-12 HessleAudio</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/HessleAudio120418.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/HessleAudio120418.mp3</guid>
+        <pubDate>Thu, 12 Apr 2018 00:00:04 GMT</pubDate>
+    </item>
+    <item>
+        <title>2018-04-11 Stamina</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Stamina110418.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Stamina110418.mp3</guid>
+        <pubDate>Wed, 11 Apr 2018 00:00:04 GMT</pubDate>
+    </item>
+    <item>
+        <title>2018-04-10 Hodge</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Hodge100418.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Hodge100418.mp3</guid>
+        <pubDate>Tue, 10 Apr 2018 00:00:04 GMT</pubDate>
+    </item>
+    <item>
+        <title>2018-04-08 Swamp81</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Swamp81080418.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Swamp81080418.mp3</guid>
+        <pubDate>Sun, 08 Apr 2018 00:00:04 GMT</pubDate>
+    </item>
+    <item>
+        <title>2018-05-06 UncleDugs</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/UncleDugs060518.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/UncleDugs060518.mp3</guid>
+        <pubDate>Sun, 06 May 2018 00:00:04 GMT</pubDate>
+    </item>
+    <item>
+        <title>2018-04-05 HessleAudio</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/HessleAudio050418.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/HessleAudio050418.mp3</guid>
+        <pubDate>Thu, 05 Apr 2018 00:00:04 GMT</pubDate>
+    </item>
+    <item>
+        <title>2018-04-04 CriticalMusic</title>
+        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/CriticalMusic040418.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/CriticalMusic040418.mp3</guid>
+        <pubDate>Wed, 04 Apr 2018 00:00:04 GMT</pubDate>
+    </item>
+
+    <item>
         <title>2018-04-01 Swamp81</title>
         <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Swamp81010418.mp3" type="audio/mpeg" length="1"/>
         <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Swamp81010418.mp3</guid>
