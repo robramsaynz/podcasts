@@ -33,7 +33,17 @@
 
 
 defmodule RinseFMRSSFeed do
-  def run do
+   def run do
+    # !File.write("./ex_links.dat", Enum.join(links, "\n"));
+    # {:ok, file} = File.read("ex_links.dat")
+    # links = String.split(file, "\n")
+
+    links = get_links()
+    update_manual_rss(links)
+    update_rinse_fm_rss(links)
+  end
+
+  def get_links() do
     {results_1, 0} = System.cmd("curl", ["-s", "http://rinse.fm/podcasts/"])
     links_1 = Regex.scan(~r{download="(http://podcast\S*?)"}, results_1)
               |> List.flatten |> tl |> Enum.take_every(2)
@@ -46,17 +56,13 @@ defmodule RinseFMRSSFeed do
     links_3 = Regex.scan(~r{download="(http://podcast\S*?)"}, results_3)
               |> List.flatten |> tl |> Enum.take_every(2)
 
-    links = [links_1, links_2, links_3] |> List.flatten
-
-    # !File.write("./ex_links.dat", Enum.join(links, "\n"));
-    # {:ok, file} = File.read("ex_links.dat")
-    # links = String.split(file, "\n")
-
-    update_manual_rss(links)
-    update_rinse_fm_rss(links)
+    {results_4, 0} = System.cmd("curl", ["-s", "http://rinse.fm/podcasts/?page=4"])
+    links_4 = Regex.scan(~r{download="(http://podcast\S*?)"}, results_4)
+              |> List.flatten |> tl |> Enum.take_every(2)
+    [links_1, links_2, links_3, links_4] |> List.flatten
   end
 
-  # update manual.rss
+   # update manual.rss
   defp update_manual_rss(links) do
     urls = links
            |> RinseFMRSSFeed.Filter.filter_previously_processed("./docs/manual.rss")
@@ -90,13 +96,13 @@ end
 defmodule RinseFMRSSFeed.Filter do
   def filter_previously_processed(urls, file) do
     {:ok, file} = File.read(file)
-    [_match, lastest_url] = Regex.run(~r{enclosure url="(.*?.mp3)"}, file)
+    [_match, latest_url] = Regex.run(~r{enclosure url="(.*?.mp3)"}, file)
 
-    unless Enum.member?(urls, lastest_url) do
-      raise("RinseFM feed didn't include the most recent entry in #{file}")
+    unless Enum.member?(urls, latest_url) do
+      raise("RinseFM feed didn't include the most recent entry (#{latest_url}) in:\n #{inspect urls}")
     end
 
-    Enum.take_while(urls, &(&1 != lastest_url))
+    Enum.take_while(urls, &(&1 != latest_url))
   end
 
   def filter_favourites(urls) do
