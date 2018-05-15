@@ -98,11 +98,18 @@ defmodule RinseFMRSSFeed.Filter do
     {:ok, file} = File.read(file)
     [_match, latest_url] = Regex.run(~r{enclosure url="(.*?.mp3)"}, file)
 
-    unless Enum.member?(urls, latest_url) do
-      raise("RinseFM feed didn't include the most recent entry (#{latest_url}) in:\n #{inspect urls}")
+    if Enum.member?(urls, latest_url) do
+      Enum.take_while(urls, &(&1 != latest_url))
+    else
+      IO.puts("""
+        RinseFM feed didn't include the most recent entry (#{latest_url}) in downloaded-urls:
+        [#{inspect List.last(urls)}, ..., #{inspect List.last(urls)}]
+        Podcast will contain all downloaded-urls after the most recent entry, meaning there's
+        probably a gap in the feed.
+      """)
+      urls
     end
 
-    Enum.take_while(urls, &(&1 != latest_url))
   end
 
   def filter_favourites(urls) do
