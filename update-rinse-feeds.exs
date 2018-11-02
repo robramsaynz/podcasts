@@ -44,19 +44,19 @@ defmodule RinseFMRSSFeed do
   end
 
   def get_links() do
-    {results_1, 0} = System.cmd("curl", ["-s", "http://rinse.fm/podcasts/"])
+    {results_1, 0} = System.cmd("curl", ["-s", "https://rinse.fm/podcasts/"])
     links_1 = Regex.scan(~r{download="(http://podcast\S*?)"}, results_1)
               |> List.flatten |> tl |> Enum.take_every(2)
 
-    {results_2, 0} = System.cmd("curl", ["-s", "http://rinse.fm/podcasts/?page=2"])
+    {results_2, 0} = System.cmd("curl", ["-s", "https://rinse.fm/podcasts/?page=2"])
     links_2 = Regex.scan(~r{download="(http://podcast\S*?)"}, results_2)
               |> List.flatten |> tl |> Enum.take_every(2)
 
-    {results_3, 0} = System.cmd("curl", ["-s", "http://rinse.fm/podcasts/?page=3"])
+    {results_3, 0} = System.cmd("curl", ["-s", "https://rinse.fm/podcasts/?page=3"])
     links_3 = Regex.scan(~r{download="(http://podcast\S*?)"}, results_3)
               |> List.flatten |> tl |> Enum.take_every(2)
 
-    {results_4, 0} = System.cmd("curl", ["-s", "http://rinse.fm/podcasts/?page=4"])
+    {results_4, 0} = System.cmd("curl", ["-s", "https://rinse.fm/podcasts/?page=4"])
     links_4 = Regex.scan(~r{download="(http://podcast\S*?)"}, results_4)
               |> List.flatten |> tl |> Enum.take_every(2)
     [links_1, links_2, links_3, links_4] |> List.flatten
