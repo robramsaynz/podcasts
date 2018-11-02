@@ -95,8 +95,8 @@ defmodule RinseFMRSSFeed do
     arr2 = String.split(string2, "<!-- END ITEMS -->", parts: 2)
     tail = List.last(arr2)
 
-    "#{head}\n"
-    <> "<!-- BEGIN ITEMS -->"
+    "#{head}"
+    <> "<!-- BEGIN ITEMS -->\n"
     <> "#{rss_items}"
     <> "<!-- END ITEMS -->"
     <> "#{tail}"

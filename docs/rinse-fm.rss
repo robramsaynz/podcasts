@@ -11,8 +11,8 @@
 
     <itunes:image href="http://robramsaynz.github.io/podcasts/RinseMainLogo.jpg" />
 
-
-<!-- BEGIN ITEMS -->    <item>
+<!-- BEGIN ITEMS -->
+    <item>
         <title>2018-11-01 AG</title>
         <enclosure url="http://podcast.dgen.net/rinsefm/podcast/AG011118.mp3" type="audio/mpeg" length="1"/>
         <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/AG011118.mp3</guid>

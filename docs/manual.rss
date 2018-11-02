@@ -11,8 +11,8 @@
 
     <itunes:image href="http://robramsaynz.github.io/podcasts/robramsaynz.jpg" />
 
-
-<!-- BEGIN ITEMS -->    <item>
+<!-- BEGIN ITEMS -->
+    <item>
         <title>2018-10-28 Swamp81</title>
         <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Swamp81281018.mp3" type="audio/mpeg" length="1"/>
         <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Swamp81281018.mp3</guid>
