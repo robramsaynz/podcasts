@@ -4,7 +4,11 @@
 # $ git add -u docs
 # $ git commit "update podcasts"
 #
-
+# TODO: get the date to stop having what should be a static date move.
+#  ie this happens:
+#      -        <pubDate>Fri, 05 Oct 2018 00:00:31 GMT</pubDate>
+#      +        <pubDate>Fri, 05 Oct 2018 00:00:41 GMT</pubDate>
+#
 # TODO: Convert this to pull out the title/date/etc
 #   <div id="naafi030118" class="borderbottom left podcast-list-item">...
 #     <div class="left w8-16">
