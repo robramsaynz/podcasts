@@ -171,9 +171,11 @@ defmodule RinseFMRSSFeed.Parse do
 
   def rss_item_from_url_info(:invalid), do: ""
   def rss_item_from_url_info(info) do
-    performer = String.replace(info.performer, "&", "&amp;")
-    url = String.replace(info.url, "&", "%26")
+    performer = html_escape(info.performer)
+    url = html_escape(info.url)
+    # url = URI.encode(info.url, &( URI.char_unescaped?(&1) && &1 != ?? && &1 != ?/ ))
     guid = String.replace(info.guid, "&", "%26")
+  html_escape(info.guid)
 
     """
         <item>
@@ -183,6 +185,11 @@ defmodule RinseFMRSSFeed.Parse do
             <pubDate>#{info.longdate}</pubDate>
         </item>
     """
+  end
+
+  # Only %-escape & < and > chars.
+  defp html_escape(string) do
+    URI.encode(string, &( &1 != ?? && &1 != ?< && &1 != ?> ))
   end
 end
 
