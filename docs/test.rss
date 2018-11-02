@@ -11,7 +11,7 @@
 
     <itunes:image href="http://robramsaynz.github.io/podcasts/robramsaynz.jpg" />
 
-    <!-- items: -->
+<!-- BEGIN ITEMS -->
     <item>
         <title>Youtube: FUTURE BASS - POST / MINIMAL DUBSTEP &gt; Cdatakill - Falling From The Sky</title>
         <link>https://www.youtube.com/watch?v=C5KLJva5Rz4&amp;index=113&amp;list=PLC5FD6A50D787F93A</link>
@@ -36,5 +36,7 @@
         <guid isPermaLink="false">https://soundcloud.com/balamii/rotations-with-marcy-dj-eliot-oct-2016</guid>
         <pubDate>Mon, 22 May 2017 01:34:00 GMT</pubDate>
     </item>
+<!-- END ITEMS -->
+
   </channel>
 </rss>

@@ -72,7 +72,7 @@ defmodule RinseFMRSSFeed do
                 |> RinseFMRSSFeed.Parse.extract_infos_from_urls
                 |> RinseFMRSSFeed.Parse.rss_items_from_url_infos
 
-    append_rss_items_to_file("./docs/manual.rss", rss_items)
+    update_rss_items_in_file("./docs/manual.rss", rss_items)
   end
 
   # update rinse-fm.rss
@@ -83,13 +83,27 @@ defmodule RinseFMRSSFeed do
                 |> RinseFMRSSFeed.Parse.extract_infos_from_urls
                 |> RinseFMRSSFeed.Parse.rss_items_from_url_infos
 
-    append_rss_items_to_file("./docs/rinse-fm.rss", rss_items)
+    update_rss_items_in_file("./docs/rinse-fm.rss", rss_items)
   end
 
-  defp append_rss_items_to_file(file, rss_items) do
+  defp update_rss_items_in_file(file, rss_items) do
     File.read!(file)
-    |> String.replace("<!-- items: -->", "<!-- items: -->\n#{rss_items}", global: false)
+    |> replace_items_inside_markers(rss_items)
     |> (&File.write!(file, &1)).()
+  end
+
+  defp replace_items_inside_markers(string, rss_items) do
+    arr = String.split(string, "<!-- BEGIN ITEMS -->", parts: 2)
+    head = hd(arr)
+    string2 = List.last(arr)
+    arr2 = String.split(string2, "<!-- END ITEMS -->", parts: 2)
+    tail = List.last(arr2)
+
+    "#{head}\n"
+    <> "<!-- BEGIN ITEMS -->"
+    <> "#{rss_items}"
+    <> "<!-- end ITEMS -->"
+    <> "#{tail}"
   end
 end
 

@@ -9,7 +9,7 @@
     <description>robramsaynz music links</description>
     <language>en-gb</language>
 
-    <!-- items: -->
+<!-- BEGIN ITEMS -->
 
     <item>
       <description>Find a Various - This Is Land Of Dance Parts 1 &amp; 2 first pressing or reissue. Complete your Various collection. Shop Vinyl and CDs.</description>
@@ -138,5 +138,7 @@
         <guid isPermaLink="false">https://soundcloud.com/balamii/rotations-with-marcy-dj-eliot-oct-2016</guid>
         <pubDate>Mon, 22 May 2017 01:34:00 GMT</pubDate>
     </item>
+<!-- END ITEMS -->
+
   </channel>
 </rss>

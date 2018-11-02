@@ -11,7 +11,7 @@
 
     <itunes:image href="http://robramsaynz.github.io/podcasts/robramsaynz.jpg" />
 
-    <!-- items: -->
+<!-- BEGIN ITEMS -->
     <item>
       <title>Videos &amp; Press - Brené Brown</title>
       <link>http://brenebrown.com/videos/</link>
@@ -104,5 +104,7 @@ This talk is a (slightly cynical) analysis of the forces that are destroying the
       <guid isPermaLink="false">https://www.youtube.com/watch?v=ikAb-NYkseI</guid>
       <pubDate>Wed, 23 May 2012 11:20:25 GMT</pubDate>
     </item>
+<!-- END ITEMS -->
+
   </channel>
 </rss>

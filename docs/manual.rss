@@ -11,7 +11,7 @@
 
     <itunes:image href="http://robramsaynz.github.io/podcasts/robramsaynz.jpg" />
 
-    <!-- items: -->
+<!-- BEGIN ITEMS -->
     <item>
         <title>2018-05-13 Swamp81</title>
         <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Swamp81130518.mp3" type="audio/mpeg" length="1"/>
@@ -724,6 +724,7 @@
       <enclosure url="http://podcast.dgen.net/rinsefm/podcast/CriticalMusic060716.mp3" type="audio/mpeg" length="1"/>
       <pubDate>06 Jul 2016 12:00:00 +0000</pubDate>
     </item>
+<!-- END ITEMS -->
 
   </channel>
 </rss>
