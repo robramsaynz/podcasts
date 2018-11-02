@@ -64,9 +64,7 @@ defmodule RinseFMRSSFeed do
 
    # update manual.rss
   defp update_manual_rss(links) do
-    urls = links
-           |> RinseFMRSSFeed.Filter.filter_previously_processed("./docs/manual.rss")
-           |> RinseFMRSSFeed.Filter.filter_favourites
+    urls = RinseFMRSSFeed.Filter.filter_favourites(links)
 
     rss_items = urls
                 |> RinseFMRSSFeed.Parse.extract_infos_from_urls
@@ -77,9 +75,7 @@ defmodule RinseFMRSSFeed do
 
   # update rinse-fm.rss
   defp update_rinse_fm_rss(links) do
-    urls = RinseFMRSSFeed.Filter.filter_previously_processed(links, "./docs/rinse-fm.rss")
-
-    rss_items = urls
+    rss_items = links
                 |> RinseFMRSSFeed.Parse.extract_infos_from_urls
                 |> RinseFMRSSFeed.Parse.rss_items_from_url_infos
 
@@ -108,24 +104,6 @@ defmodule RinseFMRSSFeed do
 end
 
 defmodule RinseFMRSSFeed.Filter do
-  def filter_previously_processed(urls, file) do
-    {:ok, file} = File.read(file)
-    [_match, latest_url] = Regex.run(~r{enclosure url="(.*?.mp3)"}, file)
-
-    if Enum.member?(urls, latest_url) do
-      Enum.take_while(urls, &(&1 != latest_url))
-    else
-      IO.puts("""
-        RinseFM feed didn't include the most recent entry (#{latest_url}) in downloaded-urls:
-        [#{inspect List.last(urls)}, ..., #{inspect List.last(urls)}]
-        Podcast will contain all downloaded-urls after the most recent entry, meaning there's
-        probably a gap in the feed.
-      """)
-      urls
-    end
-
-  end
-
   def filter_favourites(urls) do
     Enum.filter(urls, &favourite?/1)
   end
