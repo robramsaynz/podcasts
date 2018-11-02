@@ -98,7 +98,7 @@ defmodule RinseFMRSSFeed do
     "#{head}\n"
     <> "<!-- BEGIN ITEMS -->"
     <> "#{rss_items}"
-    <> "<!-- end ITEMS -->"
+    <> "<!-- END ITEMS -->"
     <> "#{tail}"
   end
 end
