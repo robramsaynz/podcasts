@@ -48,6 +48,7 @@ defmodule RinseFMRSSFeed do
   end
 
   def get_links() do
+    # TODO: turn this into, get_podcast_page(int)
     {results_1, 0} = System.cmd("curl", ["-s", "https://rinse.fm/podcasts/"])
     links_1 = Regex.scan(~r{download="(http://podcast\S*?)"}, results_1)
               |> List.flatten |> tl |> Enum.take_every(2)
@@ -81,6 +82,7 @@ defmodule RinseFMRSSFeed do
   defp update_rinse_fm_rss(links) do
     rss_items = links
                 |> RinseFMRSSFeed.Parse.extract_infos_from_urls
+#                 |> RinseFMRSSFeed.Parse.de_duplicate_urls
                 |> RinseFMRSSFeed.Parse.rss_items_from_url_infos
 
     update_rss_items_in_file("./docs/rinse-fm.rss", rss_items)
@@ -136,6 +138,20 @@ defmodule RinseFMRSSFeed.Parse do
     Enum.map(urls, &extract_info_from_url/1)
   end
 
+  # # If the guid is repeated take the last one.
+  # def de_duplicate_guids(url_infos) do
+  #   url_infos_rev = Enum.reverse(url_infos)
+  #   url_infos_rev_keylist = Enum.map(url_infos_rev, &( {&1[:guid], &1} ))
+  #   deduped_url_infos_keylist = Enum.reduce(url_infos_rev_keylist, [], fn({k, v}, acc) -> 
+  #     case acc[k] do
+  #       # This adds to the front of the list, which reveres it
+  #       nil -> [{k, v}| acc]
+  #       _ -> acc
+  #     end
+  #   end)
+  #   Keyword.values(deduped_url_infos_keylist)
+  # end
+
   def extract_info_from_url(url) do
     # urls look like:  http://podcast.dgen.net/rinsefm/podcast/Boxed300417.mp3
 
@@ -151,6 +167,7 @@ defmodule RinseFMRSSFeed.Parse do
             {longdate, 0} = System.cmd("date", ["-u", "-jf", "%d%m%y%H%M", date<>"0000",
                                        "+%a, %d %b %Y %H:%M:%S GMT", "2>/dev/null"])
 
+            # TODO: convert this to a struct
             %{
               url: url,
               guid: url,
