@@ -169,7 +169,7 @@ defmodule RinseFMRSSFeed.Parse do
         # Check we have a valid date
         case System.cmd("date", ["-u", "-jf", "%d%m%y", date, "+%Y-%m-%d"], [stderr_to_stdout: true]) do
           {shortdate, 0} ->
-            {longdate, 0} = System.cmd("date", ["-u", "-jf", "%d%m%y%H%M", date<>"0000",
+            {longdate, 0} = System.cmd("date", ["-u", "-jf", "%d%m%y%H%M%S", date<>"000000",
                                        "+%a, %d %b %Y %H:%M:%S GMT", "2>/dev/null"])
 
             # TODO: convert this to a struct
