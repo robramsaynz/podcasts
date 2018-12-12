@@ -82,7 +82,8 @@ defmodule RinseFMRSSFeed do
   defp update_rinse_fm_rss(links) do
     rss_items = links
                 |> RinseFMRSSFeed.Parse.extract_infos_from_urls
-#                 |> RinseFMRSSFeed.Parse.de_duplicate_urls
+                |> RinseFMRSSFeed.Parse.remove_invalid_urls
+                |> RinseFMRSSFeed.Parse.de_duplicate_guids
                 |> RinseFMRSSFeed.Parse.rss_items_from_url_infos
 
     update_rss_items_in_file("./docs/rinse-fm.rss", rss_items)
@@ -138,19 +139,23 @@ defmodule RinseFMRSSFeed.Parse do
     Enum.map(urls, &extract_info_from_url/1)
   end
 
-  # # If the guid is repeated take the last one.
-  # def de_duplicate_guids(url_infos) do
-  #   url_infos_rev = Enum.reverse(url_infos)
-  #   url_infos_rev_keylist = Enum.map(url_infos_rev, &( {&1[:guid], &1} ))
-  #   deduped_url_infos_keylist = Enum.reduce(url_infos_rev_keylist, [], fn({k, v}, acc) -> 
-  #     case acc[k] do
-  #       # This adds to the front of the list, which reveres it
-  #       nil -> [{k, v}| acc]
-  #       _ -> acc
-  #     end
-  #   end)
-  #   Keyword.values(deduped_url_infos_keylist)
-  # end
+  def remove_invalid_urls(urls) do
+    Enum.reject(urls, &( &1 == :invalid ))
+  end
+
+  # for repeated guids, take the first one.
+  def de_duplicate_guids(url_infos), do: de_duplicate_guids(url_infos, [])
+  def de_duplicate_guids([head | tail], acc) do
+    entry = {String.to_atom(head[:guid]), head}
+    de_duplicate_guids(tail, [entry | acc])
+  end
+  def de_duplicate_guids([], acc) do
+    # Keyword.new/1 preserves the last version of repeated values (in the
+    # reversed list)
+    Keyword.new(acc)
+    |> Enum.reverse
+    |> Keyword.values
+  end
 
   def extract_info_from_url(url) do
     # urls look like:  http://podcast.dgen.net/rinsefm/podcast/Boxed300417.mp3
