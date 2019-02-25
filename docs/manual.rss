@@ -54,12 +54,6 @@
         <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Swamp81030219.mp3</guid>
         <pubDate>Sun, 03 Feb 2019 00:00:00 GMT</pubDate>
     </item>
-    <item>
-        <title>2019-02-01 UncleDugs</title>
-        <enclosure url="http://podcast.dgen.net/rinsefm/podcast/UncleDugs010219.mp3" type="audio/mpeg" length="1"/>
-        <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/UncleDugs010219.mp3</guid>
-        <pubDate>Fri, 01 Feb 2019 00:00:00 GMT</pubDate>
-    </item>
 <!-- END ITEMS -->
 
   </channel>
