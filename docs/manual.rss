@@ -13,6 +13,48 @@
 
 <!-- BEGIN ITEMS -->
     <item>
+        <title>2019-03-03 Swamp81</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/Swamp81030319.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/Swamp81030319.mp3</guid>
+        <pubDate>Sun, 03 Mar 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-03-01 UncleDugs</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/UncleDugs010319.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/UncleDugs010319.mp3</guid>
+        <pubDate>Fri, 01 Mar 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-02-28 Keysound</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/Keysound280219.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/Keysound280219.mp3</guid>
+        <pubDate>Thu, 28 Feb 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-02-27 HospitalRecords</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/HospitalRecords270219.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/HospitalRecords270219.mp3</guid>
+        <pubDate>Wed, 27 Feb 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-02-22 UncleDugs</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/UncleDugs220219.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/UncleDugs220219.mp3</guid>
+        <pubDate>Fri, 22 Feb 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-02-20 Metalheadz</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/Metalheadz200219.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/Metalheadz200219.mp3</guid>
+        <pubDate>Wed, 20 Feb 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-02-18 HessleAudio</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/HessleAudio180219.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/HessleAudio180219.mp3</guid>
+        <pubDate>Mon, 18 Feb 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
         <title>2019-02-17 Swamp81</title>
         <enclosure url="http://podcast.dgen.net/rinsefm/podcast/Swamp81170219.mp3" type="audio/mpeg" length="1"/>
         <guid isPermaLink="false">http://podcast.dgen.net/rinsefm/podcast/Swamp81170219.mp3</guid>
