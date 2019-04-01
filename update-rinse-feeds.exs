@@ -25,17 +25,6 @@
 #     </div>
 #   </div>
 
-# TODO: To remove duplicate entries
-#   guid_list = File.read!(@input_file)
-#               |> String.split("\n", trim: true)
-#               |> Enum.map(&String.trim/1)
-#               |> Enum.filter(&( &1 =~ ~r/guid/ ))
-#
-#   deduped_list = list |> Enum.sort |> Enum.dedup
-#
-#   extra items = list -- deduped
-
-
 defmodule RinseFMRSSFeed do
    def run do
     # !File.write("./ex_links.dat", Enum.join(links, "\n"));
@@ -151,7 +140,7 @@ defmodule RinseFMRSSFeed.Parse do
   end
   def de_duplicate_guids([], acc) do
     # Keyword.new/1 preserves the last version of repeated values (in the
-    # reversed list)
+    # reversed list, ie original topmost entry)
     Keyword.new(acc)
     |> Enum.reverse
     |> Keyword.values
