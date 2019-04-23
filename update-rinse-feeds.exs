@@ -31,28 +31,35 @@ defmodule RinseFMRSSFeed do
     # {:ok, file} = File.read("ex_links.dat")
     # links = String.split(file, "\n")
 
-    links = get_links()
+    links = get_links!()
     update_manual_rss(links)
     update_rinse_fm_rss(links)
   end
 
-  def get_links() do
+  def get_links!() do
     # TODO: turn this into, get_podcast_page(int)
+
     {results_1, 0} = System.cmd("curl", ["-s", "https://rinse.fm/podcasts/"])
-    links_1 = Regex.scan(~r{download="(http://\S*?)"}, results_1)
-              |> List.flatten |> tl |> Enum.take_every(2)
-
     {results_2, 0} = System.cmd("curl", ["-s", "https://rinse.fm/podcasts/?page=2"])
-    links_2 = Regex.scan(~r{download="(http://\S*?)"}, results_2)
-              |> List.flatten |> tl |> Enum.take_every(2)
-
     {results_3, 0} = System.cmd("curl", ["-s", "https://rinse.fm/podcasts/?page=3"])
-    links_3 = Regex.scan(~r{download="(http://\S*?)"}, results_3)
-              |> List.flatten |> tl |> Enum.take_every(2)
-
     {results_4, 0} = System.cmd("curl", ["-s", "https://rinse.fm/podcasts/?page=4"])
-    links_4 = Regex.scan(~r{download="(http://podcast\S*?)"}, results_4)
-              |> List.flatten |> tl |> Enum.take_every(2)
+
+    if (results_1 == [] || results_2 == [] || results_3 == [] || results_4 == []), do:
+      raise "could not download rinse fm pages"
+
+    downloads_1 = Regex.scan(~r{download="(http://\S*?)"}, results_1)
+    downloads_2 = Regex.scan(~r{download="(http://\S*?)"}, results_2)
+    downloads_3 = Regex.scan(~r{download="(http://\S*?)"}, results_3)
+    downloads_4 = Regex.scan(~r{download="(http://\S*?)"}, results_4)
+
+    if (downloads_1 == [] || downloads_2 == [] || downloads_3 == [] || downloads_4 == []), do:
+      raise "could not get download= elements from rinse fm pages"
+
+    links_1 = downloads_1 |> List.flatten |> tl |> Enum.take_every(2)
+    links_2 = downloads_2 |> List.flatten |> tl |> Enum.take_every(2)
+    links_3 = downloads_3 |> List.flatten |> tl |> Enum.take_every(2)
+    links_4 = downloads_4 |> List.flatten |> tl |> Enum.take_every(2)
+
     [links_1, links_2, links_3, links_4] |> List.flatten
   end
 
@@ -185,8 +192,7 @@ defmodule RinseFMRSSFeed.Parse do
     performer = html_escape(info.performer)
     url = html_escape(info.url)
     # url = URI.encode(info.url, &( URI.char_unescaped?(&1) && &1 != ?? && &1 != ?/ ))
-    guid = String.replace(info.guid, "&", "%26")
-  html_escape(info.guid)
+    guid = html_escape(info.guid)
 
     """
         <item>
