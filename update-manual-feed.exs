@@ -1,6 +1,6 @@
 #!/usr/bin/env elixir
 #
-# $ ./update-rinse-feeds.exs
+# $ ./update-manual-feed.exs
 # $ git add -u docs
 # $ git commit "update podcasts"
 #
@@ -32,7 +32,7 @@ defmodule RinseFMRSSFeed do
     # links = String.split(file, "\n")
 
     links = get_links!()
-    update_rinse_fm_rss(links)
+    update_manual_rss(links)
   end
 
   def get_links!() do
@@ -62,34 +62,35 @@ defmodule RinseFMRSSFeed do
     [links_1, links_2, links_3, links_4] |> List.flatten
   end
 
-  # update rinse-fm.rss
-  defp update_rinse_fm_rss(links) do
-    rss_items = links
+   # update manual.rss
+  defp update_manual_rss(links) do
+    urls = RinseFMRSSFeed.Filter.filter_favourites(links)
+
+    rss_items = urls
                 |> RinseFMRSSFeed.Parse.extract_infos_from_urls
                 |> RinseFMRSSFeed.Parse.remove_invalid_urls
                 |> RinseFMRSSFeed.Parse.de_duplicate_guids
                 |> RinseFMRSSFeed.Parse.rss_items_from_url_infos
 
-    update_rss_items_in_file("./docs/rinse-fm.rss", rss_items)
+    update_rss_items_in_file("./docs/manual.rss", rss_items)
   end
 
   defp update_rss_items_in_file(file, rss_items) do
     File.read!(file)
-    |> replace_items_inside_markers(rss_items)
+    |> insert_items_at_top_of_list_markers(rss_items)
     |> (&File.write!(file, &1)).()
   end
 
-  defp replace_items_inside_markers(string, rss_items) do
+  defp insert_items_at_top_of_list_markers(string, rss_items) do
     arr = String.split(string, "<!-- BEGIN ITEMS -->", parts: 2)
     head = hd(arr)
-    string2 = List.last(arr)
-    arr2 = String.split(string2, "<!-- END ITEMS -->", parts: 2)
-    tail = List.last(arr2)
+    tail = List.last(arr)
+
+    IO.puts "WARNING: This should find the last existing guid and remove it if necessary\n"
 
     "#{head}"
     <> "<!-- BEGIN ITEMS -->\n"
     <> "#{rss_items}"
-    <> "<!-- END ITEMS -->"
     <> "#{tail}"
   end
 end
