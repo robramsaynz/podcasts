@@ -13,6 +13,42 @@
 
 <!-- BEGIN ITEMS -->
     <item>
+        <title>2019-05-03 UncleDugs</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/UncleDugs030519.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/UncleDugs030519.mp3</guid>
+        <pubDate>Fri, 03 May 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-04-28 Swamp81</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/Swamp81280419.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/Swamp81280419.mp3</guid>
+        <pubDate>Sun, 28 Apr 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-04-26 UncleDugs</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/UncleDugs260419.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/UncleDugs260419.mp3</guid>
+        <pubDate>Fri, 26 Apr 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-04-25 Keysound</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/Keysound250419.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/Keysound250419.mp3</guid>
+        <pubDate>Thu, 25 Apr 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-04-24 HospitalRecords</title>
+        <enclosure url="http://podcast.rinse.fm/rinse/rinsefm/HospitalRecords240419.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://podcast.rinse.fm/rinse/rinsefm/HospitalRecords240419.mp3</guid>
+        <pubDate>Wed, 24 Apr 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-04-22 HessleAudio</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/HessleAudio220419.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/HessleAudio220419.mp3</guid>
+        <pubDate>Mon, 22 Apr 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
         <title>2019-04-19 UncleDugs</title>
         <enclosure url="http://85.17.94.10/rinse/rinsefm/UncleDugs190419.mp3" type="audio/mpeg" length="1"/>
         <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/UncleDugs190419.mp3</guid>
