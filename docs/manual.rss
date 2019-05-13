@@ -13,6 +13,24 @@
 
 <!-- BEGIN ITEMS -->
     <item>
+        <title>2019-05-12 Swamp81</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/Swamp81120519.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/Swamp81120519.mp3</guid>
+        <pubDate>Sun, 12 May 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-05-10 UncleDugs</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/UncleDugs100519.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/UncleDugs100519.mp3</guid>
+        <pubDate>Fri, 10 May 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-05-05 Hodge</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/Hodge050519.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/Hodge050519.mp3</guid>
+        <pubDate>Sun, 05 May 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
         <title>2019-05-03 UncleDugs</title>
         <enclosure url="http://85.17.94.10/rinse/rinsefm/UncleDugs030519.mp3" type="audio/mpeg" length="1"/>
         <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/UncleDugs030519.mp3</guid>
