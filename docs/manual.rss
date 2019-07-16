@@ -13,6 +13,79 @@
 
 <!-- BEGIN ITEMS -->
     <item>
+        <title>2019-07-15 HessleAudio</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/HessleAudio150719.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/HessleAudio150719.mp3</guid>
+        <pubDate>Mon, 15 Jul 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-07-14 Swamp81</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/Swamp81140719.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/Swamp81140719.mp3</guid>
+        <pubDate>Sun, 14 Jul 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-01-10 StaminaMC</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/StaminaMC100119.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/StaminaMC100119.mp3</guid>
+        <pubDate>Thu, 10 Jan 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-07-08 HessleAudio</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/HessleAudio080719.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/HessleAudio080719.mp3</guid>
+        <pubDate>Mon, 08 Jul 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-07-07 Hodge</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/Hodge070719.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/Hodge070719.mp3</guid>
+        <pubDate>Sun, 07 Jul 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-07-07 Swamp81</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/Swamp81070719.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/Swamp81070719.mp3</guid>
+        <pubDate>Sun, 07 Jul 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-07-05 UncleDugs</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/UncleDugs050719.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/UncleDugs050719.mp3</guid>
+        <pubDate>Fri, 05 Jul 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-06-28 Uncledugs</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/Uncledugs280619.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/Uncledugs280619.mp3</guid>
+        <pubDate>Fri, 28 Jun 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-06-27 Keysound</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/Keysound270619.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/Keysound270619.mp3</guid>
+        <pubDate>Thu, 27 Jun 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-06-26 HospitalRecords</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/HospitalRecords260619.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/HospitalRecords260619.mp3</guid>
+        <pubDate>Wed, 26 Jun 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-06-23 Swamp81</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/Swamp81230619.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/Swamp81230619.mp3</guid>
+        <pubDate>Sun, 23 Jun 2019 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+        <title>2019-06-22 LobsterTheremin</title>
+        <enclosure url="http://85.17.94.10/rinse/rinsefm/LobsterTheremin220619.mp3" type="audio/mpeg" length="1"/>
+        <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/LobsterTheremin220619.mp3</guid>
+        <pubDate>Sat, 22 Jun 2019 00:00:00 GMT</pubDate>
+    </item>
+
+    <item>
         <title>2019-05-12 Swamp81</title>
         <enclosure url="http://85.17.94.10/rinse/rinsefm/Swamp81120519.mp3" type="audio/mpeg" length="1"/>
         <guid isPermaLink="false">http://85.17.94.10/rinse/rinsefm/Swamp81120519.mp3</guid>
